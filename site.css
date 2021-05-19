@@ -1,0 +1,40 @@
+.tree ul {
+	margin-left: 0px;
+}
+
+.tree li {
+	list-style-type: none;
+	margin: 10px;
+	position: relative;
+}
+
+.tree li::before{
+	content: "";
+	position: absolute;
+	top: -4px;
+	left: -20px;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-radius: 0 0 0 0px;
+	width: 15px;
+	height: 15px;
+}
+
+.tree li::after{
+	position: absolute;
+	content:"";
+	top: 11px;
+	left: -20px;
+	border-left: 1px solid #ccc;
+	border-radius: 0px 0 0 0;
+	width: 15px;
+	height: 100%;
+}
+
+.tree li:last-child::after{
+	display:none;
+}
+
+.tree li:last-child:before{
+	border-radius: 0 0 0 5px;
+}
